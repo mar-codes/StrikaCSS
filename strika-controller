@@ -12,7 +12,7 @@
   );
 }
 
-/* Base skin container */
+/* Base skin ontainer */
 .custom.controller.ds4 {
   background: linear-gradient(135deg, var(--strika-deep-green), var(--strika-main-green), var(--strika-dark-accent));
   background-blend-mode: overlay;
