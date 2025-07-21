@@ -1,0 +1,83 @@
+:root {
+  --strika-deep-green: #0f1d12;
+  --strika-main-green: #204d26;
+  --strika-light-green: #3f8c4f;
+  --strika-highlight: #f0e9d2;
+  --strika-glow: #4ea863;
+  --strika-dark-accent: #08130a;
+  --textured-pattern: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.02) 0 2px,
+    transparent 2px 4px
+  );
+}
+
+/* Base skin container */
+.custom.controller.ds4 {
+  background: linear-gradient(135deg, var(--strika-deep-green), var(--strika-main-green), var(--strika-dark-accent));
+  background-blend-mode: overlay;
+  background-image: var(--textured-pattern);
+  border: 3px solid var(--strika-light-green);
+  border-radius: 22px;
+  box-shadow: 0 0 25px var(--strika-dark-accent);
+}
+
+/* Face buttons */
+.custom.ds4 .button {
+  background: linear-gradient(145deg, var(--strika-light-green), var(--strika-main-green));
+  border: 2px solid var(--strika-glow);
+  color: var(--strika-highlight);
+  box-shadow: inset 0 0 8px var(--strika-deep-green), 0 0 10px rgba(63,140,79,0.5);
+  transition: all 0.2s ease-in-out;
+}
+.custom.ds4 .button.pressed {
+  transform: scale(0.96);
+  filter: brightness(1.2);
+  box-shadow: 0 0 15px var(--strika-glow);
+}
+
+/* D-pad & sticks */
+.custom.ds4 .dpad,
+.custom.ds4 .stick {
+  background: linear-gradient(120deg, var(--strika-dark-accent), var(--strika-main-green));
+  border: 2px solid var(--strika-light-green);
+  box-shadow: inset 0 0 10px var(--strika-glow);
+  background-blend-mode: multiply;
+}
+
+/* Touchpad */
+.custom.ds4 .touchpad {
+  background: linear-gradient(135deg, var(--strika-deep-green), var(--strika-main-green));
+  background-image: var(--textured-pattern);
+  border: 2px solid var(--strika-highlight);
+  box-shadow: 0 0 15px var(--strika-glow);
+  opacity: 0.9;
+}
+
+/* Lightbar glow */
+.custom.ds4 .lightbar {
+  background: radial-gradient(circle, var(--strika-glow) 35%, var(--strika-highlight));
+  box-shadow: 0 0 20px var(--strika-glow), 0 0 40px var(--strika-glow);
+}
+
+/* Triggers & bumpers */
+.custom.ds4 .trigger,
+.custom.ds4 .bumper {
+  background: var(--strika-main-green);
+  border: 1px solid var(--strika-glow);
+}
+.custom.ds4 .trigger.pressed,
+.custom.ds4 .bumper.pressed {
+  background: var(--strika-light-green);
+  box-shadow: 0 0 10px var(--strika-glow);
+}
+
+/* Circular face button shape */
+.custom.ds4 .abxy .button {
+  border-radius: 50%;
+}
+
+/* Meta button highlight */
+.custom.ds4 .meta.pressed {
+  background: var(--strika-glow);
+}
